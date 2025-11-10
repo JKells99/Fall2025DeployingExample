@@ -46,7 +46,7 @@ docker push yourhubusername/imagename:latest
 
 
 Notes
-- If your `Dockerfile` expects the compiled JAR to exist (COPY target/*.jar /app/app.jar), be sure you ran the Maven `package` goal (via IDE or `mvn package`) before building the image. Alternatively, change the Dockerfile to build the project during image build.
+- If your `Dockerfile` expects the compiled JAR to exist (COPY target/*.jar /app/app.jar), be sure you ran the Maven `package` (via IDE or `mvn package`) before building the image.
 - Use `docker images` to list local images and confirm tags.
 - Use `docker ps` and `docker logs <container>` to inspect running containers.
 
