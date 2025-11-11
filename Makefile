@@ -1,10 +1,13 @@
-#if you see this just ignore it for now, I am testing something new for fun to make life easier
+#if you see this just ignore it for now, I am testing something new for fun to make life easier/ and to just understand
 
 .PHONY: build run package clean logs
 
 # Build the Docker image
 build:
-	docker build -t jkells/bookapp:latest .
+	docker buildx build \
+      --platform linux/amd64 \
+      -t dockerhubusername/bookapp:latest \
+      --push .
 
 # Run the container
 run:
@@ -20,3 +23,6 @@ logs:
 # Remove old Docker images and containers
 clean:
 	docker system prune -af
+
+push:
+	docker push dockerhubusername/bookapp:latest
