@@ -6,8 +6,7 @@
 build:
 	docker buildx build \
       --platform linux/amd64 \
-      -t dockerhubusername/bookapp:latest \
-      --push .
+      -t jkells/bookapp:latest .
 
 # Run the container
 run:
@@ -25,4 +24,4 @@ clean:
 	docker system prune -af
 
 push:
-	docker push dockerhubusername/bookapp:latest
+	docker push jkells/bookapp:latest
