@@ -44,6 +44,23 @@ docker login
 docker push yourhubusername/imagename:latest
 ```
 
+##  Step 1: Create Secrets in Your GitHub Repository
+
+In your GitHub repository, navigate to:  
+**Settings → Secrets and variables → Actions → New repository secret**
+
+Add the following secrets:
+
+| Secret Name       | Description                                  |
+|--------------------|----------------------------------------------|
+| `DOCKER_USERNAME`  | Your Docker Hub username                     |
+| `DOCKER_PASSWORD`  | Your Docker Hub access token or password     |
+
+> 💡 **Tip:**  
+> It’s recommended to use a Docker **access token** instead of your password.  
+> You can generate one under **Docker Hub → Account Settings → Security → New Access Token**.
+
+
 
 Notes
 - If your `Dockerfile` expects the compiled JAR to exist (COPY target/*.jar /app/app.jar), be sure you ran the Maven `package` (via IDE or `mvn package`) before building the image.
