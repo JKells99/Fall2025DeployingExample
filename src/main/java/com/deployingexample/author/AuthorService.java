@@ -19,4 +19,15 @@ public class AuthorService {
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
     }
+
+    public Author getAuthorById(Long id) {
+        return authorRepository.findById(id).get();
+    }
+    public void deleteAuthor(Long id) {
+        authorRepository.deleteById(id);
+    }
+    public Author updateAuthor(Long id, Author author) {
+        author.setId(id);
+        return authorRepository.save(author);
+    }
 }
