@@ -1,5 +1,4 @@
 package com.deployingexample.author;
-
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
