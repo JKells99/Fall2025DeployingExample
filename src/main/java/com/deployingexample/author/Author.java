@@ -1,8 +1,6 @@
 package com.deployingexample.author;
 
 import jakarta.persistence.*;
-import lombok.Setter;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
