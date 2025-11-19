@@ -1,7 +1,9 @@
 package com.deployingexample.author;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
